@@ -1,6 +1,6 @@
 A Lit Room
 ===========
-I am testing the codebase of A Dark Room and changing the numbers of the game for research purposes, this is not my project. To play the original game, go to the site below:
+I am testing the codebase of A Dark Room and changing the numbers of the game for research purposes, **this is not my project**. To play the original game, go to the site below:
 
 [Click to play](http://adarkroom.doublespeakgames.com)
 
