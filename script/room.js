@@ -517,7 +517,7 @@ var Room = {
 		$SM.set('game.fire', $SM.get('game.fire.value') === undefined ? this.FireEnum.Dead : $SM.get('game.fire'));
 
 		// Create the room tab
-		this.tab = Header.addLocation(_("A Dark Room"), "room", Room);
+		this.tab = Header.addLocation(_("A Lonely Hut"), "home", Room);
 
 		// Create the Room panel
 		this.panel = $('<div>')
@@ -530,7 +530,7 @@ var Room = {
 		// Create the light button
 		new Button.Button({
 			id: 'lightButton',
-			text: _('light fire'),
+			text: _('start job'),
 			click: Room.lightFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
@@ -577,6 +577,7 @@ var Room = {
 		}
 		Engine.setTimeout($SM.collectIncome, 1000);
 
+		// TODO: Change this
 		Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
 		Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
 	},
@@ -586,6 +587,7 @@ var Room = {
 	onArrival: function (transition_diff) {
 		Room.setTitle();
 		if (Room.changed) {
+			// TODO: Change this
 			Notifications.notify(Room, _("the fire is {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text));
 			Notifications.notify(Room, _("the room is {0}", Room.TempEnum.fromInt($SM.get('game.temperature.value')).text));
 			Room.changed = false;
